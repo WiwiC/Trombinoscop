@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+
+    <%if user_signed_in? %>
+      <h1>Bienvenue sur The Hacking Project</h1>
+        <p><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %></p>
+        <h2>Trombi</h2>
+
+        <div id="wrapper">
+        <% @users.each do |user| %> 
+            <div id="box">
+            
+              <span class="picture"><%= image_tag user.image_url unless user.image_url == nil %></span><br>
+              <span class="item"><strong> Username:</strong></span><br> <%= user.username %>
+              <span class="item"><strong> Slack:</strong> <%= link_to user.slack_handle.to_s, "https://thehackingproject.slack.com/team/"%></span><br>
+              <span class="item"><strong>Bio:</strong> <%= user.bio %></span><br>
+            </div>
+            <%end%>
+        </div>
+          
+    <%else%>
+      <h1>Welcome to the Hacking Trombi</h1>
+      <p>Please <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Log in", new_user_session_path %> to view the trombi</p>
+    <%end%>
+  </div>
+</div>

@@ -1,0 +1,121 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+
+body {
+  padding-top: 60px;
+}
+
+h2 {
+  text-align: center;
+}
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+
+/* users */
+
+.users {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .corsair {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+
+.alert-alert {
+  @extend .alert-warning;
+}
+
+.alert-notice {
+  @extend .alert-info;
+}
+
+/* users */
+
+  .users {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .corsair {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+}
+
+#wrapper {
+  width: 100%;
+}
+
+#box {
+  height: 250px;
+  width: 25%;
+  float:left;
+}
+
+.item {
+width: 100%;
+overflow: hidden;
+text-overflow: ellipsis;
+}
